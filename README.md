@@ -108,8 +108,6 @@ python generate_ohlcv.py \
 
 ## Output Format
 
-Generated files match your existing testdata format:
-
 ```csv
 time,open,high,low,close,volume
 1702000000,50000.00,50125.50,49875.25,50100.00,123.45678
@@ -165,32 +163,6 @@ python generate_ohlcv.py \
     --checkpoint_dir checkpoints/... \
     --n_datasets 5 \
     --seed 42  # Same seed = same synthetic data
-```
-
-## How to Use with Your Backtest
-
-Update your Go backtest to load synthetic data:
-
-```go
-// In pkg/data/loader.go or similar
-func LoadSyntheticData(path string) ([]types.Candle, error) {
-    // Same format as real data - just point to synthetic files
-    return LoadCSV(path)
-}
-
-// Test strategy robustness
-syntheticFiles := []string{
-    "testdata/synthetic/BTCUSDT_synthetic_0000.csv",
-    "testdata/synthetic/BTCUSDT_synthetic_0001.csv",
-    // ... more synthetic datasets
-}
-
-for _, file := range syntheticFiles {
-    candles, _ := LoadSyntheticData(file)
-    result := backtest.Run(strategy, candles)
-    // Strategy should perform similarly on synthetic vs real
-    // Large divergence = possible overfitting
-}
 ```
 
 ## Tips for Better Synthetic Data
