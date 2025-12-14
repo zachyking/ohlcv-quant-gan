@@ -1,0 +1,59 @@
+{
+  "n_features": 6,
+  "seq_length": 64,
+  "noise_dim": 64,
+  "hidden_dim": 128,
+  "n_layers": 4,
+  "model_type": "tcn",
+  "use_attention": true,
+  "data_params": {
+    "log_return": {
+      "mean_x": -9.528273508642068e-07,
+      "std_x": 0.001435807922023135,
+      "delta": 1,
+      "mean_z": -0.0003396045244593586,
+      "std_z": 0.3829782081451788,
+      "gaussianize": true
+    },
+    "body_ratio": {
+      "mean_x": 0.00016852194289829702,
+      "std_x": 0.6203315484880209,
+      "delta": 0,
+      "mean_z": 3.785271283266166e-18,
+      "std_z": 0.9999999999999998,
+      "gaussianize": true
+    },
+    "upper_wick": {
+      "mean_x": 0.2246009917629825,
+      "std_x": 0.23537515315358234,
+      "delta": 0.018619236928893067,
+      "mean_z": -0.009007665158439244,
+      "std_z": 0.971423902961694,
+      "gaussianize": true
+    },
+    "lower_wick": {
+      "mean_x": 0.2289087526032611,
+      "std_x": 0.23708533587046257,
+      "delta": 0.009477718292415727,
+      "mean_z": -4.1637984115927826e-17,
+      "std_z": 1.0,
+      "gaussianize": true
+    },
+    "range_pct": {
+      "mean_x": 0.0016394828750362028,
+      "std_x": 0.001544558501613739,
+      "delta": 1,
+      "mean_z": -0.13954805075959223,
+      "std_z": 0.38990931098412546,
+      "gaussianize": true
+    },
+    "volume_norm": {
+      "mean_x": 0.025741521319963736,
+      "std_x": 1.1321746512918898,
+      "delta": 1,
+      "mean_z": -0.16237002110567342,
+      "std_z": 0.3781989043770429,
+      "gaussianize": true
+    }
+  }
+}
